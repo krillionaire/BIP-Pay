@@ -1,0 +1,31 @@
+<!doctype html>
+  <head>
+    <title>BIP-Pay</title>
+    <script src="../../../js/popup.js"></script>
+    <script src="../../../js/qrious.js"></script>
+    <style type="text/css">
+		body {
+			width: 250px;
+		}
+		button {
+			width: 100%;
+			margin-bottom: 5px;
+		}
+	</style>
+  </head>
+  <body>
+    <button id="checkPage">Extract Invoice Data</button><br/>
+	Bitcoin (BTC) Address:
+	<div id="btcAddress"></div><br/>
+	Invoice Amount:
+	<div id="btcAmt"></div><br/>
+	BitPay Fee:
+	<div id="bitpayFee"></div><br/>
+	Total Amount:
+	<div id="totalAmt"></div><br/>
+	BIP21 Payment QR Code:
+	<div>
+		<canvas id="qr"></canvas>
+	</div>
+  </body>
+</html>
