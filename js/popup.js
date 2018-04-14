@@ -28,10 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
               btcAmt.innerText = parseFloat(results.btcPrice).toFixed(8) + ' BTC';
               bitpayFee.innerText = parseFloat(results.minerFees.BTC.totalFee * 0.00000001).toFixed(8) + ' BTC';
               totalAmt.innerText = parseFloat(results.btcDue).toFixed(8) + ' BTC';
-              rawURL.appendChild(newURL)
               var qr = new QRious({
                 element: bipQR,
-                value: JSON.parse(request.responseText).invoice.paymentUrls.BIP21,
+                value: results.paymentUrls.BIP21,
                 background: 'white', // background color
                 foreground: 'black', // foreground color
                 level: 'L', // Error correction level of the QR code (L, M, Q, H)
@@ -59,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
               totalAmt.innerText = parseFloat(results.btcDue).toFixed(8) + ' BTC';
               var qr = new QRious({
                 element: bipQR,
-                value: JSON.parse(request.responseText).invoice.paymentUrls.BIP21,
+                value: results.paymentUrls.BIP21,
                 background: 'white', // background color
                 foreground: 'black', // foreground color
                 level: 'L', // Error correction level of the QR code (L, M, Q, H)
