@@ -1,9 +1,9 @@
 <!doctype html>
   <head>
     <title>BIP-Pay</title>
-    <script src="../../../js/popup.js"></script>
-    <script src="../../../js/qrious.js"></script>
-    <style type="text/css">
+    <script src='../../../js/popup.js'></script>
+    <script src='../../../js/qrious.js'></script>
+    <style type='text/css'>
 		body {
 			width: 250px;
 		}
@@ -11,21 +11,57 @@
 			width: 100%;
 			margin-bottom: 5px;
 		}
+		.dataFill {
+			font-weight: 600;
+		}
+		#bip21Code {
+		    word-wrap: break-word;
+		}
+		#qr {
+			height: 0;
+		}
+		#walletOpen {
+		    border: 1px solid #4582E8;
+		    background: #4582E8;
+		    color: #ffffff;
+		    border-radius: 3px;
+		    padding: 10px;
+		    display: none;
+		    width: 90%;
+		    margin-left: auto;
+		    margin-right: auto;
+		    text-align: center;
+		    text-decoration: none;
+		}
+		#walletOpen:hover {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+		}
+		#rawData {
+			display: none;
+			text-align: center;
+		}
 	</style>
   </head>
   <body>
-    <button id="checkPage">Extract Invoice Data</button><br/>
+    <button id='checkPage'>Extract Invoice Data</button><br/>
+    <div width='100%'>
+    	<a id='rawData' target='_blank' rel='noopener noreferrer'>View Raw Data</a>
+    </div>
 	Bitcoin (BTC) Address:
-	<div id="btcAddress"></div><br/>
+	<div class='dataFill' id='btcAddress'></div><br/>
 	Invoice Amount:
-	<div id="btcAmt"></div><br/>
+	<div class='dataFill' id='btcAmt'></div><br/>
 	BitPay Fee:
-	<div id="bitpayFee"></div><br/>
+	<div class='dataFill' id='bitpayFee'></div><br/>
 	Total Amount:
-	<div id="totalAmt"></div><br/>
-	BIP21 Payment QR Code:
+	<div class='dataFill' id='totalAmt'></div><br/>
+	BIP21 Payment Code:
+	<div class='dataFill' id='bip21Code'></div>
 	<div>
-		<canvas id="qr"></canvas>
+		<canvas id='qr'></canvas>
+	</div>
+	<div width='100%'>
+		<a id='walletOpen' target='_blank' rel='noopener noreferrer'>Open In Wallet</a>
 	</div>
   </body>
 </html>

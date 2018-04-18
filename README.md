@@ -1,5 +1,5 @@
 # BIP-Pay
-Extract Data from BitPay BIP-70 Invoices - SUPPORTS BITCOIN (BTC) ONLY!!!
+Extract Data from BitPay BIP70 Invoices - SUPPORTS BITCOIN (BTC) ONLY!!!
 
 
 This is Alpha state software, use at your own risk! Updates and documentation to be added.
